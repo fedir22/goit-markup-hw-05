@@ -27,22 +27,22 @@
         >
         <nav class="pagination">
           <ul class="list site-nav">
-            <li class="nav-item"><a href="" class="nav-link current link">Студия</a></li>
-            <li class="nav-item"><a href="./portfolio.html" class="nav-link link">Портфолио</a></li>
-            <li class="nav-item"><a href="" class="nav-link link">Контакты</a></li>
+            <li><a href="" class="line current link">Студия</a></li>
+            <li><a href="./portfolio.html" class="link">Портфолио</a></li>
+            <li><a href="" class="link">Контакты</a></li>
           </ul>
         </nav>
         <ul class="list phone">
           <li>
-            <a href="mailto:info@devstudio.com" class="nav-link link"
-              ><svg class="phone-icon" width="16" height="12">
+            <a href="mailto:info@devstudio.com" class="link">
+              <svg class="phone-icon" width="16" height="12px">
                 <use href="./images/icons.svg#icon-envelope"></use>
               </svg>
               info@devstudio.com
             </a>
           </li>
           <li>
-            <a href="tel:+380961111111" class="nav-link link"
+            <a href="tel:+380961111111" class="link"
               ><svg class="phone-icon" width="10" height="16">
                 <use href="./images/icons.svg#icon-smartphone"></use>
               </svg>
@@ -58,7 +58,16 @@
       <section class="hero">
         <div class="container">
           <h1 class="hero-title">ЭФФЕКТИВНЫЕ РЕШЕНИЯ ДЛЯ ВАШЕГО БИЗНЕСА</h1>
-          <button class="button-hero" type="button">Заказать услугу</button>
+          <button data-modal-open class="button-hero" type="button">Заказать услугу</button>
+        </div>
+        <div class="backdrop is-hidden" data-modal>
+          <div class="modal">
+            <button data-modal-close class="modal-btn">
+              <svg width="18px" height="18px">
+                <use href="./images/icons.svg#icon-close"></use>
+              </svg>
+            </button>
+          </div>
         </div>
       </section>
 
@@ -121,14 +130,17 @@
         <div class="container">
           <h2 class="caption">Чем мы занимаемся</h2>
           <ul class="list about-caption">
-            <li>
+            <li class="img-wrapper">
               <img src="./images/img.jpg" alt="Десктопные приложения" width="370" />
+              <p class="desc">ДЕСКТОПНЫЕ ПРИЛОЖЕНИЯ</p>
             </li>
-            <li>
+            <li class="img-wrapper">
               <img src="./images/img-2.jpg" alt="Мобильные приложения" width="370" />
+              <p class="desc">МОБИЛЬНЫЕ ПРИЛОЖЕНИЯ</p>
             </li>
-            <li>
+            <li class="img-wrapper">
               <img src="./images/img-3.jpg" alt="Дизайнерские решения" width="370" />
+              <p class="desc">ДИЗАЙНЕРСКИЕ РЕШЕНИЯ</p>
             </li>
           </ul>
         </div>
@@ -409,5 +421,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
